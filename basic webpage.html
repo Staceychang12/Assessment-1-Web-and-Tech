@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauritius Beaches | Stacey Chang</title>
+  <link rel="stylesheet" href="basic-webpage.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="https://via.placeholder.com/180x60?text=STACEY+CHANG" alt="Stacey Chang Portfolio Logo" class="logo" />
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="basic-webpage.html" class="active">Week 2: Basic Webpage</a></li>
+          <li><a href="rps.html">Week 3: Rock Paper Scissors</a></li>
+          <li><a href="week4.html">Week 4: Business Advisor</a></li>
+          <li><a href="week5.html">Week 5: RSS Reader</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>The Beautiful Beaches of Mauritius</h1>
+      <p class="subtitle">My Personal Connection with Sea and Sand</p>
+    </section>
+
+    <section class="content">
+      <h2>My Love for Mauritius Beaches</h2>
+      <p>Growing up in Mauritius, I've always had a special connection with our island's stunning beaches. The pristine white sands, crystal-clear turquoise waters, and swaying palm trees create a paradise that I'm fortunate to call home.</p>
+      
+      <div class="image-container">
+        <img src="https://via.placeholder.com/800x400?text=Beautiful+Mauritius+Beach" alt="Beautiful beach in Mauritius" class="feature-image">
+        <p class="caption">The breathtaking view of a typical Mauritius beach</p>
+      </div>
+      
+      <h2>My Favorite Beach Spots</h2>
+      <p>While all beaches in Mauritius are beautiful, I have a few special places that I return to whenever I need to reconnect with nature:</p>
+      
+      <div class="beach-list">
+        <div class="beach-item">
+          <h3>Belle Mare</h3>
+          <p>This long stretch of powdery white sand is perfect for long walks. The gentle waves make it ideal for swimming, and the shallow waters extend far from the shore.</p>
+        </div>
+        
+        <div class="beach-item">
+          <h3>Le Morne</h3>
+          <p>Nestled at the foot of Le Morne Brabant mountain, this beach offers spectacular views and is a popular spot for kitesurfing and windsurfing.</p>
+        </div>
+        
+        <div class="beach-item">
+          <h3>Blue Bay</h3>
+          <p>Known for its marine park, Blue Bay offers some of the best snorkeling experiences on the island with its vibrant coral reefs and diverse marine life.</p>
+        </div>
+      </div>
+      
+      <h2>What The Beach Means To Me</h2>
+      <p>The beach is more than just a place of beauty for me—it's a sanctuary where I can clear my mind and find peace. The rhythmic sound of waves, the gentle sea breeze, and the feeling of sand between my toes brings an instant sense of calm that I cannot find anywhere else.</p>
+      
+      <p>During my studies, I often visit the beach to:</p>
+      <ul>
+        <li>Clear my mind after intense study sessions</li>
+        <li>Find inspiration for creative projects</li>
+        <li>Spend quality time with friends and family</li>
+        <li>Exercise through swimming and beach walks</li>
+        <li>Practice mindfulness by connecting with nature</li>
+      </ul>
+      
+      <div class="quote">
+        <blockquote>
+          "The beach is not just a place; it's a feeling—a reminder of life's simple pleasures and nature's incredible beauty."
+        </blockquote>
+      </div>
+      
+      <h2>Beach Activities I Enjoy</h2>
+      <p>When I visit the beach, I love to engage in various activities that connect me with the sea and sand:</p>
+      
+      <ol>
+        <li><strong>Snorkeling:</strong> Exploring the underwater world and discovering colorful fish and coral reefs.</li>
+        <li><strong>Beach Picnics:</strong> Sharing meals with loved ones while watching the sunset over the horizon.</li>
+        <li><strong>Shell Collecting:</strong> Finding unique seashells that tell stories of the ocean's depths.</li>
+        <li><strong>Photography:</strong> Capturing the ever-changing moods of the sea and sky.</li>
+        <li><strong>Meditation:</strong> Finding inner peace while listening to the waves crash against the shore.</li>
+      </ol>
+    </section>
+
+    <section class="conclusion">
+      <h2>The Beach: My Lifelong Companion</h2>
+      <p>As I continue my journey through life and education, I know that the beaches of Mauritius will always be there to provide solace, joy, and inspiration. There's something magical about growing up on an island surrounded by such natural beauty—it shapes your perspective and instills a deep appreciation for the environment.</p>
+      <p>I encourage everyone to experience the therapeutic power of beaches, whether in Mauritius or anywhere else in the world. The connection between humans and the ocean is profound and timeless.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Stacey Chang Wai Ling | Week 2: Basic Webpage</p>
+  </footer>
+
+  <button id="toTopBtn" aria-label="Back to top">↑</button>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+    
+    // Back to top button functionality
+    const toTopBtn = document.getElementById('toTopBtn');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        toTopBtn.classList.add('visible');
+      } else {
+        toTopBtn.classList.remove('visible');
+      }
+    });
+    
+    toTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
