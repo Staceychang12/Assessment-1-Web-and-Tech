@@ -1,166 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stacey Chang Wai Ling | Web Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <img src="https://via.placeholder.com/180x60?text=STACEY+CHANG" alt="Stacey Chang Portfolio Logo" class="logo" />
-      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
-      <nav>
-        <ul id="navMenu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="basic webpage.html">Week 2: Basic Webpage</a></li>
-          <li><a href="rps.html">Week 3: Rock Paper Scissors</a></li>
-          <li><a href="flatland.html">Week 4: Flatland Business Advisor</a></li>
-          <li><a href="week5.html">Week 5: RSS Reader</a></li>
-        </ul>
-      </nav>
-       <!-- Add this inside your header, right after the navigation -->
-    <div class="dark-mode-container">
-    <span class="dark-mode-label">Dark Mode</span>
-    <label class="toggle-switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider"></span>
-    </label>
-  </div>
-    
-  </header>
-
-  <main>
-    <section id="about">
-      <h1>Welcome to My Web Portfolio!</h1>
-      <p>I am <strong>Stacey Chang Wai Ling</strong>, a 22-year-old student currently in my second year at Curtin Mauritius, pursuing a Bachelor of Commerce in Business Information Systems. I am a dedicated and results-driven person with a keen interest in the rapidly evolving digital landscape.</p>
-    </section>
-
-    <section id="education">
-      <h2>My Education</h2>
-      <p><strong>EBENE SSS (Girls) College (2015-2022)</strong></p>
-      <ul>
-        <li><b>Cambridge School Certificate (SC)</b>: English, French, Mathematics, Additional Mathematics, Economics, Business, Accounting, Sociology</li>
-        <li><b>Cambridge Higher School Certificate (HSC)</b>: Main - Accounting, Economics & Mathematics; Sub - French & General Paper</li>
-      </ul>
-    </section>
-
-    <section id="work-experience">
-      <h2>My Work Experience</h2>
-      <ul>
-        <li><strong>Internship at KPMG</strong> (15th March 2023 to 16th June 2023)</li>
-        <li><strong>Internship at EY</strong> (14th January 2025 to 21st February 2025)</li>
-      </ul>
-    </section>
-
-    <section id="extracurricular">
-      <h2>My Extra-Curricular Activities</h2>
-      <ul>
-        <li>Innoved Competition (2019)</li>
-        <li>Food and Fun Day Participation (2020)</li>
-        <li>Member of Music Club (2022)</li>
-        <li>Member of Prefect Body (2020-2021)</li>
-        <li>Actively participated in Sports Day and Cross Country</li>
-        <li>Voluntary Work at ST Patrick Church for Family Day (2016, 2017, 2018)</li>
-        <li>Peer Mentor – Class Buddy Mentoring for ECOM1000 Analytics for Decision-Making (Semester 1 & 2, 2024)</li>
-        <li>Member of Student Ambassadors Club</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>My Projects</h2>
-      <div class="project-grid">
-        <div class="project">
-          <a href="basic webpage.html">Week 2: Basic Webpage</a>
-          <p>A simple layout to understand HTML5 semantics and applying CSS for styling.</p>
-        </div>
-        <div class="project">
-          <a href="rps.html">Week 3: Rock Paper Scissors Game</a>
-          <p>Interactive game with JavaScript logic and speech synthesis for game interaction.</p>
-        </div>
-        <div class="project">
-          <a href="flatland.html">Week 4: Flatland Business Advisor</a>
-          <p>Manipulating the DOM to generate business buzzwords for a virtual advisor.</p>
-        </div>
-        <div class="project">
-          <a href="week5.html">Week 5: RSS Reader</a>
-          <p>Creating an RSS feed reader using the Fetch API to display live updates from various sources.</p>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Stacey Chang Wai Ling | Web Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img src="https://via.placeholder.com/180x60?text=STACEY+CHANG" alt="Stacey Chang Portfolio Logo" class="logo" />
+        <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        <nav>
+          <ul id="navMenu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="basic%20webpage.html">Week 2: Basic Webpage</a></li>
+            <li><a href="rps.html">Week 3: Rock Paper Scissors</a></li>
+            <li><a href="flatland.html">Week 4: Flatland Business Advisor</a></li>
+            <li><a href="rss.html">Week 5: RSS Reader</a></li>
+          </ul>
+        </nav>
+        <!-- Add this inside your header, right after the navigation -->
+        <div class="dark-mode-container">
+          <span class="dark-mode-label">Dark Mode</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+          </label>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section id="technologies">
-      <h2>Web Development Technologies</h2>
-      <ul>
-        <li>HTML - Structure</li>
-        <li>CSS - Presentation</li>
-        <li>JavaScript - Behavior</li>
-        <li>Fetch API - Data Retrieval</li>
-      </ul>
+    <main>
+      <section id="about">
+        <h1>Welcome to My Web Portfolio!</h1>
+        <p>I am <strong>Stacey Chang Wai Ling</strong>, a 22-year-old student currently in my second year at Curtin Mauritius, pursuing a Bachelor of Commerce in Business Information Systems. I am a dedicated and results-driven person with a keen interest in the rapidly evolving digital landscape.</p>
+      </section>
 
-      <h3>Web Development Process</h3>
-      <ol>
-        <li>Plan the website structure</li>
-        <li>Create HTML structure</li>
-        <li>Add CSS styling (Week 2)</li>
-        <li>Implement JavaScript functionality (Week 3)</li>
-        <li>Integrate APIs (Week 5)</li>
-      </ol>
-    </section>
+      <section id="education">
+        <h2>My Education</h2>
+        <p><strong>EBENE SSS (Girls) College (2015-2022)</strong></p>
+        <ul>
+          <li><b>Cambridge School Certificate (SC)</b>: English, French, Mathematics, Additional Mathematics, Economics, Business, Accounting, Sociology</li>
+          <li><b>Cambridge Higher School Certificate (HSC)</b>: Main - Accounting, Economics & Mathematics; Sub - French & General Paper</li>
+        </ul>
+      </section>
 
-    <section id="contact">
-      <h2>Contact & Resources</h2>
-      <p>Learn more about HTML on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>.</p>
-      <p>Contact me at <a href="mailto:21772458@student.curtin.edu.au">21772458@student.curtin.edu.au</a>.</p>
-    </section>
-  </main>
+      <section id="work-experience">
+        <h2>My Work Experience</h2>
+        <ul>
+          <li><strong>Internship at KPMG</strong> (15th March 2023 to 16th June 2023)</li>
+          <li><strong>Internship at EY</strong> (14th January 2025 to 21st February 2025)</li>
+        </ul>
+      </section>
 
-  <footer>
-    <p>&copy; 2025 Stacey Chang Wai Ling | Portfolio</p>
-  </footer>
+      <section id="extracurricular">
+        <h2>My Extra-Curricular Activities</h2>
+        <ul>
+          <li>Innoved Competition (2019)</li>
+          <li>Food and Fun Day Participation (2020)</li>
+          <li>Member of Music Club (2022)</li>
+          <li>Member of Prefect Body (2020-2021)</li>
+          <li>Actively participated in Sports Day and Cross Country</li>
+          <li>Voluntary Work at ST Patrick Church for Family Day (2016, 2017, 2018)</li>
+          <li>Peer Mentor – Class Buddy Mentoring for ECOM1000 Analytics for Decision-Making (Semester 1 & 2, 2024)</li>
+          <li>Member of Student Ambassadors Club</li>
+        </ul>
+      </section>
 
-  <button id="toTopBtn" aria-label="Back to top">↑</button>
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            <a href="basic%20webpage.html">Week 2: Basic Webpage</a>
+            <p>A simple layout to understand HTML5 semantics and applying CSS for styling.</p>
+          </div>
+          <div class="project">
+            <a href="rps.html">Week 3: Rock Paper Scissors Game</a>
+            <p>Interactive game with JavaScript logic and speech synthesis for game interaction.</p>
+          </div>
+          <div class="project">
+            <a href="flatland.html">Week 4: Flatland Business Advisor</a>
+            <p>Manipulating the DOM to generate business buzzwords for a virtual advisor.</p>
+          </div>
+          <div class="project">
+            <a href="rss.html">Week 5: RSS Reader</a>
+            <p>Creating an RSS feed reader using the Fetch API to display live updates from various sources.</p>
+          </div>
+        </div>
+      </section>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.getElementById('navMenu');
-    
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
-    
-    // Back to top button functionality
-    const toTopBtn = document.getElementById('toTopBtn');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        toTopBtn.classList.add('visible');
-      } else {
-        toTopBtn.classList.remove('visible');
-      }
-    });
-    
-    toTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    // Highlight active navigation item
-    const currentPage = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-      const linkPage = link.getAttribute('href');
-      if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  </script>
-</body>
-</html>
+      <section id="technologies">
+        <h2>Web Development Technologies</h2>
+        <ul>
+          <li>HTML - Structure</li>
+          <li>CSS - Presentation</li>
+          <li>JavaScript - Behavior</li>
+          <li>Fetch API - Data Retrieval</li>
+        </ul>
+
+        <h3>Web Development Process</h3>
+        <ol>
+          <li>Plan the website structure</li>
+          <li>Create HTML structure</li>
+          <li>Add CSS styling (Week 2)</li>
+          <li>Implement JavaScript functionality (Week 3)</li>
+          <li>Integrate APIs (Week 5)</li>
+        </ol>
+      </section>
+
+      <section id="contact">
+        <h2>Contact & Resources</h2>
+        <p>Learn more about HTML on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>.</p>
+        <p>Contact me at <a href="mailto:21772458@student.curtin.edu.au">21772458@student.curtin.edu.au</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Stacey Chang Wai Ling | Portfolio</p>
+    </footer>
+
+    <button id="toTopBtn" aria-label="Back to top">↑</button>
+  </body>
+  </html>
