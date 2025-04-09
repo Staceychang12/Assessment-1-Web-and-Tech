@@ -3,92 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock, Paper, Scissors</title>
+  <title>Rock, Paper, Scissors | Stacey Chang Wai Ling</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      background-color: #f0f8ff;
-    }
-
-    h1 {
-      font-size: 2em;
-    }
-
-    .circle {
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      border-radius: 50%;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 2em;
-      margin: 10px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .circle:hover {
-      transform: scale(1.1);
-      background-color: #45a049;
-    }
-
-    #result {
-      margin-top: 20px;
-      font-size: 1.5em;
-    }
-
-    .instruction {
-      display: block;
-      margin-top: 15px;
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <img src="https://via.placeholder.com/100x50?text=LOGO" alt="Portfolio Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="week2.html">Week 2: Basic Webpage (HTML & CSS)</a></li>
-        <li><a href="week3.html">Week 3: Rock Paper Scissors Game (Simple JS interactions)</a></li>
-        <li><a href="week4.html">Week 4: Flatland Business Advisor (DOM Manipulation)</a></li>
-        <li><a href="week5.html">Week 5: RSS Reader (API Call using Fetch API)</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <img src="https://via.placeholder.com/180x60?text=STACEY+CHANG" alt="Stacey Chang Portfolio Logo" class="logo" />
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="basic webpage.html">Week 2: Basic Webpage</a></li>
+          <li><a href="rps.html" class="active">Week 3: Rock Paper Scissors</a></li>
+          <li><a href="flatland.html">Week 4: Flatland Business Advisor</a></li>
+          <li><a href="rss.html">Week 5: RSS Reader</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <h1>Rock, Paper or Scissors?</h1>
-    <div>
-      <span class="circle" onclick="play('rock')">R</span>
-      <span class="circle" onclick="play('paper')">P</span>
-      <span class="circle" onclick="play('scissors')">S</span>
-    </div>
+    <section>
+      <h1>Rock, Paper or Scissors?</h1>
+      <div>
+        <span class="circle" onclick="play('rock')">R</span>
+        <span class="circle" onclick="play('paper')">P</span>
+        <span class="circle" onclick="play('scissors')">S</span>
+      </div>
 
-    <div id="result"></div>
+      <div id="result"></div>
 
-    <a class="instruction" href="https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors" target="_blank">
-      RULES</a>
-
-    <button id="toTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" style="display:none;">Back to Top</button>
+      <a class="instruction" href="https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors" target="_blank">
+        RULES</a>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Stacey Chang Wai Ling</p>
+    <p>&copy; 2025 Stacey Chang Wai Ling | Portfolio</p>
   </footer>
 
-  <script>
-    function play(userChoice) {
-      const computerChoice = 'rock'; // Always rock
-      const resultDiv = document.getElementById('result');
-      const synth = window.speechSynthesis;
-      let result = '';
+  <button id="toTopBtn" aria-label="Back to top">↑</button>
 
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+    
+    // Game logic
+    function play(userChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)]; // Random choice
+      const resultDiv = document.getElementById('result');
+      let result = '';
+      
       if (userChoice === computerChoice) {
         result = `Draw! We both chose ${userChoice}.`;
       } else if (
@@ -100,25 +73,46 @@
       } else {
         result = `You lose! ${computerChoice} beats ${userChoice}.`;
       }
-
+      
       resultDiv.textContent = result;
-      const utter = new SpeechSynthesisUtterance(result);
-      synth.speak(utter);
-    }
-
-    // Show/hide "Back to Top" button
-    window.onscroll = function () {
-      const btn = document.getElementById("toTopBtn");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
+      
+      // Speech synthesis if available
+      if (window.speechSynthesis) {
+        const synth = window.speechSynthesis;
+        const utter = new SpeechSynthesisUtterance(result);
+        synth.speak(utter);
       }
-    };
-
-    // Scroll to top
-    document.getElementById("toTopBtn").addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    
+    // Back to top button functionality
+    const toTopBtn = document.getElementById('toTopBtn');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        toTopBtn.classList.add('visible');
+      } else {
+        toTopBtn.classList.remove('visible');
+      }
+    });
+    
+    toTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Highlight active navigation item
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     });
   </script>
 </body>
