@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSS Reader | Stacey Chang Wai Ling</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript.js" defer></script>
+  <script src="rss.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="https://via.placeholder.com/180x60?text=STACEY+CHANG" alt="Stacey Chang Portfolio Logo" class="logo" />
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="basic-webpage.html">Week 2: Basic Webpage</a></li>
+          <li><a href="rps.html">Week 3: Rock Paper Scissors</a></li>
+          <li><a href="flatland.html">Week 4: Flatland Business Advisor</a></li>
+          <li><a href="rss.html" class="active">Week 5: RSS Reader</a></li>
+        </ul>
+      </nav>
+      <div class="dark-mode-container">
+        <span class="dark-mode-label">Dark Mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="rss-reader">
+      <h1>Multi-Feed RSS Dashboard</h1>
+      <p>Select a feed to view the latest articles from various sources. This RSS reader uses the Fetch API to retrieve and display content from different feeds.</p>
+      
+      <!-- Feed Selector -->
+      <div class="feed-container">
+        <label for="feed-selector">Choose a feed:</label>
+        <select id="feed-selector" class="feed-select">
+          <option value="https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml">NY Times Technology</option>
+          <option value="https://feeds.bbci.co.uk/news/world/rss.xml">BBC World News</option>
+          <option value="https://developer.mozilla.org/en-US/blog/rss.xml">Mozilla Developer Blog</option>
+          <option value="https://css-tricks.com/feed/">CSS-Tricks</option>
+          <option value="https://www.wired.com/feed/rss">Wired</option>
+        </select>
+      </div>
+
+      <!-- Loading indicator -->
+      <div id="loading" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading feed...</p>
+      </div>
+
+      <!-- Error message container -->
+      <div id="error-message" class="error-container"></div>
+      
+      <!-- Container for RSS feed content -->
+      <div id="content" class="rss-content"></div>
+    </section>
+
+    <section id="about-rss">
+      <h2>About This RSS Reader</h2>
+      <p>This RSS reader demonstrates the following web development concepts:</p>
+      <ul>
+        <li><strong>Fetch API:</strong> Making asynchronous network requests to retrieve RSS feeds</li>
+        <li><strong>DOM Manipulation:</strong> Dynamically updating the page content based on feed data</li>
+        <li><strong>Error Handling:</strong> Providing user-friendly messages when issues occur</li>
+        <li><strong>Responsive Design:</strong> Adapting to different screen sizes for optimal viewing</li>
+      </ul>
+      <p>You can explore different feeds using the dropdown selector above. Each article includes a title, summary, and link to the original content.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Stacey Chang Wai Ling | Portfolio</p>
+  </footer>
+
+  <button id="toTopBtn" aria-label="Back to top">↑</button>
+</body>
+</html>
