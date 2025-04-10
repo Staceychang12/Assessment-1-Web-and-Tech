@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 7</title>
+    <meta name="author" content="Stacey Chang Wai Ling">
+    <meta name="description" content="Explore flatland and interact with its inhabitants">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="words">
+        <!-- Text Will Go Here -->
+    </div>
+    <div id="square"></div>
+    
+    <script>
+        function greeting() {
+            const words = document.getElementById('words');
+            words.innerHTML = "Welcome to Flatland.<br> I am Square.<br>Click me for business advice.";
+        }
+        
+        function changeColour(color) {
+            document.getElementById('square').style.backgroundColor = color;
+        }
+        
+        // Function to create a random buzzword phrase
+        function createBuzzwordPhrase() {
+            let buzz = ["Paradigm-changing", "Multi-tier", "10,000-foot", "Agile", "Customer", "Win-win"];
+            let action = ["empowered", "value-added", "synergy", "creative", "oriented", "focused", "aligned"];
+            let outcome = ["process", "deliverable", "solution", "tipping-point", "strategy", "vision"];
+            
+            let idx_buz = Math.floor(Math.random() * buzz.length);
+            let idx_act = Math.floor(Math.random() * action.length);
+            let idx_out = Math.floor(Math.random() * outcome.length);
+            
+            return buzz[idx_buz] + " " + action[idx_act] + " " + outcome[idx_out];
+        }
+        
+        // Setup when DOM content is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get references to DOM elements
+            const square = document.getElementById('square');
+            const words = document.getElementById('words');
+            
+            // Show greeting
+            greeting();
+            
+            // Add event listeners
+            square.addEventListener('click', function() {
+                changeColour('#c8685d');
+                words.innerHTML = createBuzzwordPhrase();
+            });
+            
+            square.addEventListener('mouseover', function() {
+                changeColour('#4CAF50');
+            });
+            
+            square.addEventListener('mouseout', function() {
+                changeColour('#389098');
+            });
+            
+            // Initialize square color
+            changeColour('#389098');
+        });
+    </script>
+</body>
+</html>

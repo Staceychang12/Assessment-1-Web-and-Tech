@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 6</title>
+    <meta name="author" content="Stacey Chang Wai Ling">
+    <meta name="description" content="Explore flatland and interact with its inhabitants">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="greeting()">
+    <div id="words">
+        <!-- Text Will Go Here -->
+    </div>
+    <div id="square"></div>
+    
+    <script>
+        function greeting() {
+            const words = document.getElementById('words');
+            words.innerHTML = "Welcome to Flatland.<br> I am Square.<br>Click me for business advice.";
+        }
+        
+        function changeColour(color) {
+            document.getElementById('square').style.backgroundColor = color;
+        }
+        
+        // Get reference to the square element
+        const square = document.getElementById('square');
+        
+        // Add event listeners
+        square.addEventListener('click', function() {
+            changeColour('#c8685d');
+        });
+        
+        square.addEventListener('mouseover', function() {
+            changeColour('#4CAF50');
+        });
+        
+        square.addEventListener('mouseout', function() {
+            changeColour('#389098');
+        });
+        
+        // Initialize square color
+        changeColour('#389098');
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 3</title>
+    <meta name="author" content="Stacey Chang Wai Ling">
+    <meta name="description" content="Explore flatland and interact with its inhabitants">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="words">
+        <!-- Text Will Go Here -->
+    </div>
+    <div id="square" 
+         onclick="makeRed()" 
+         onmouseover="makeGreen()" 
+         onmouseout="makeGray()"></div>
+    
+    <script>
+        function makeRed() {
+            document.getElementById('square').style.backgroundColor = "#c8685d";
+        }
+        
+        function makeGreen() {
+            document.getElementById('square').style.backgroundColor = "#4CAF50";
+        }
+        
+        function makeGray() {
+            document.getElementById('square').style.backgroundColor = "#389098";
+        }
+        
+        // Initialize square color
+        document.getElementById('square').style.backgroundColor = "#389098";
+    </script>
+</body>
+</html>
