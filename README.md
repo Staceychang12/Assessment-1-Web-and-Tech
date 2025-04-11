@@ -1,1 +1,19 @@
-21772458 Business Web and Tech First assignment
+Portfolio Fusion: AI-Assisted Web Development
+Where Human Creativity Meets Artificial Intelligence
+ISYS3004 Business Web and Mobile Technologies
+
+Full name: Mary Stacey Angel Lee Moye Chang Wai Ling
+Student ID: 21772458
+Campus: Curtin Mauritius
+Assessment 1: Website Portfolio 
+
+
+This module’s project (ISYS3004 – Business Web and Mobile Technologies) consists of designing a portfolio website to allow us, beginners learn the basics of web development along with the integration of Artificial Intelligence (AI) tools. It not only blends the use of AI but also our originality, our creativity and our imagination which is essential in the modern web development industry. We make use of basic web technologies such as Vanilla HTML, CSS, and finally JavaScript, along with AI tools such as Claude or ChatGPT to enhance the learning process and improve our coding skills. This project makes us realise the importance of an accessible and interactive website which can be further improved with the assistance of AI coding techniques, thus allowing us to get a better overview of a responsive, user-friendly and engaging webpages.
+
+
+In this project, we were tasked to use our coding skills to build several web pages based on activities of Week 1 till Week 5. The weekly projects represent a web page that englobes several core web design principles such as the Flexbox, grid layouts, typography, DOM manipulation, JavaScript interactivity and finally fetching API. My website consists of the homepage, Week 2 – Basic Webpage, Week 3 – Rock Paper Scissors, Week 4 – Flatland Business Advisor, and finally Week 5: RSS Reader.
+In this assignment, we have the useful assistance of AI tools to help us ameliorate or refine our codes. This put emphasis on our ability to analyse and think critically about the major or minor changes that AI has generated. This documentation is crucial for the ethical and effective use of AI as we have documented logs of the AI conversations, how the codes can be refined before and after its use, and, finally write a personal reflection on our progress and how the whole process went. It was important to commit regularly on GitHub so that we would effectively keep track of our learning process. Afterwards, we would have to use both GitHub and Netlify to host the completed portfolio online and have a sIP archive of the GitHub repository to showcase live demonstration of the final product.
+
+The main objective of this assignment is to make use of the front-end web development fundamentals and principles learnt during our seminars. The use of semantic HTML, accessible CSS design and a responsive JavaScript are essential to generate a seamless, user-friendly, and consistent portfolio website. With the proper use and assistance of AI tools, we can effectively generate, debug, improve and critically analyse our codes. Besides, this pushes our critical thinking, problem-solving, and our ability to engage with an AI tool, allowing us to demonstrate our own judgment and test our analytical capabilities. During the whole process, we are identifying the potential issues, how we could improve our way of thinking and develop effective solutions. 
+
+The scope of this assignment is to build and design a cohesive portfolio website that embeds weekly activities (week 1 till week 5). We got proper instructions to implement semantic HTML (headers, footers, properly structured content), responsive CSS layout and styling (media queries, consistent colour schemes), and interactive JavaScript (navigation menus, interactive UI). Furthermore, the WCAG 2.1 AA standards must be met for effective accessibility practices, and a detailed README.md file must be provided to include all the code comments. Finally, the ethical use of AI tools, and the deployment of the final website online using Netlify and GitHub must be done for proper records. 
