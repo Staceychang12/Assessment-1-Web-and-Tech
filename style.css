@@ -1,3 +1,8 @@
+     /*File Name: style.css
+    Author: Stacey Chang Wai Ling
+    Student ID: 21772458 
+    Business Web and Mobile Technologies - Portfolio Website*/
+    
     /* Modern styling for the portfolio */
     :root {
       --primary-color: #070809;
@@ -164,7 +169,7 @@
 
     /* Hero section */
     #about {
-      background-image: linear-gradient(rgba(95, 146, 155, 0.696), rgba(44, 62, 80, 0.7)), url('https://via.placeholder.com/1200x400?text=Portfolio+Background');
+      background-image: linear-gradient(rgba(95, 146, 155, 0.696), rgba(44, 62, 80, 0.7)), url('https://media.istockphoto.com/id/1139402489/vector/abstract-modern-background.jpg?s=612x612&w=0&k=20&c=GAkYFnGct6FJJdPFF-EfP3KGkQ5p0g7tAA8gAUYuYwI=');
       background-size: cover;
       background-position: center;
       color: var(--white);
@@ -304,9 +309,9 @@
 
   /* New media query for medium screens (max-width: 1200px) */
   @media (max-width: 1200px) {
-    /* Adjust for medium screen sizes */
+    
     .nav ul {
-      flex-direction: row; /* Use horizontal layout if needed */
+      flex-direction: row; 
     }
   }
 
@@ -461,12 +466,12 @@
     .gallery-thumbnails {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 180px;
+      gap: 175px;
       margin-bottom: 15px;
     }
 
     .gallery-thumbnail {
-      width: 150%;
+      width: 200%;
       height: 200px;
       object-fit: cover;
       cursor: pointer;
@@ -479,9 +484,9 @@
     }
 
     .gallery-full-image {
-      width: 100%;
+      width: 150%;
       border-radius: 8px;
-      height: 400px;
+      height: 200px;
       object-fit: cover;
       opacity: 1;
       transition: opacity 0.3s ease;
@@ -1036,3 +1041,13 @@ body.dark-mode #resetScoreBtn:hover {
       max-width: 100%;
     }
   }
+
+/* Apply to body when it has the class 'basic-webpage' */
+body.basic-webpage {
+  background-image: url('https://www.oazure.com/media/780364/pbb00122-scaled.jpeg?anchor=center&mode=crop&width=880&height=444&rnd=133314050520000000');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgb(59, 113, 125);
+}
