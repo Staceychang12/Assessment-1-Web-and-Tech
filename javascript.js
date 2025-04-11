@@ -1,3 +1,8 @@
+  /*File Name: javascript.js
+    Author: Stacey Chang Wai Ling
+    Student ID: 21772458 
+    Business Web and Mobile Technologies - Portfolio Website*/
+
     // Show/hide "Back to Top" button
     window.onscroll = function () {
       const btn = document.getElementById("toTopBtn");
@@ -20,7 +25,7 @@
 let playerScoreCount = 0;
 let computerScoreCount = 0;
 
-// Wait for DOM to be fully loaded before executing
+//  DOM will be fully loaded before the execution
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM fully loaded');
   
@@ -89,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Dark mode toggle
   if (darkModeToggle) {
-    // Check if user has previously set dark mode
+
     const darkModeEnabled = localStorage.getItem('darkMode') === 'enabled';
     if (darkModeEnabled) {
       document.body.classList.add('dark-mode');
@@ -161,7 +166,7 @@ function updateScores() {
   }
 }
 
-// Main game logic - this needs to be a global function since it's called from onclick
+// Main game logic 
 function play(userChoice) {
   console.log('Play function called with choice:', userChoice);
   const choices = ['rock', 'paper', 'scissors'];
@@ -190,18 +195,18 @@ function play(userChoice) {
     computerScoreCount++;
   }
 
-  // Update scores
+  
   updateScores();
 
   // Display result
   resultDiv.textContent = result;
 
-  // Add animation to result (if you have a pop class)
+  
   resultDiv.classList.remove("pop");
   void resultDiv.offsetWidth; // Force reflow
   resultDiv.classList.add("pop");
 
-  // Show "Play Again" button - MAKE SURE IT'S VISIBLE
+  // Show "Play Again" button 
   if (playAgainBtn) {
     console.log('Making Play Again button visible');
     playAgainBtn.style.display = "inline-block";
@@ -209,7 +214,7 @@ function play(userChoice) {
     console.error('Play Again button not found when trying to show it');
   }
 
-  // Try speech synthesis
+  // Speech synthesis
   try {
     if (window.speechSynthesis) {
       const synth = window.speechSynthesis;
@@ -222,7 +227,7 @@ function play(userChoice) {
   }
 }
 
-// Added additional function to reset scores if needed
+// Function to reset scores 
 function resetScores() {
   playerScoreCount = 0;
   computerScoreCount = 0;
@@ -243,25 +248,20 @@ function resetScores() {
     // =======================================
     // Flatland Business Advisor Functionality
     // =======================================
-  /* Name: script.js
-    Author: Stacey Chang Wai Ling
-    Description: Add basic behaviour to Flatland
-    Version: 1.0
-  */
 
-  // Find elements in DOM tree once the document is loaded
+  // Finding elements in DOM tree 
   document.addEventListener('DOMContentLoaded', function() {
     const square = document.getElementById('square');
     const words = document.getElementById('words');
     
-    // Only run code if we're on a page with these elements
+    
     if (square && words) {
-        // Display initial greeting
+        // Initial greeting displayed
         greeting();
         
-        // Add event listeners to square
+        // Event listeners is added to square
         square.addEventListener('click', function() {
-            // Change color and display buzzword phrase
+            // Changing the color and displaying buzzword phrase
             changeColour('#c8685d');
             words.innerHTML = createBuzzwordPhrase();
         });
@@ -376,10 +376,10 @@ function resetScores() {
       const darkModeToggle = document.getElementById('darkModeToggle');
       if (!darkModeToggle) return; // Only run on pages with the toggle button
       
-      // Check for saved user preference
+      // Checking for saved user preference
       const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
       
-      // Set initial state
+      // Setting initial state
       if (isDarkMode) {
         document.body.classList.add('dark-mode');
         darkModeToggle.checked = true;
@@ -439,7 +439,7 @@ function resetScores() {
           const imgSrc = this.getAttribute('data-full');
           const caption = this.getAttribute('data-caption');
           
-          // Apply transition effect
+          // Applying transition effect
           fullImage.style.opacity = '0';
           
           setTimeout(() => {
@@ -497,7 +497,7 @@ function resetScores() {
     const loadingIndicator = document.getElementById('loading');
     const errorMessageContainer = document.getElementById('error-message');
 
-    // Hide loading indicator initially
+    // Hiding loading indicator initially
     loadingIndicator.style.display = 'none';
 
     // Event listener for feed selector
@@ -518,7 +518,7 @@ function resetScores() {
       errorMessageContainer.innerHTML = '';
       loadingIndicator.style.display = 'flex';
 
-      // Use a proxy service to avoid CORS issues and convert XML to JSON
+      // Using a proxy service so no CORS issues are encountered and XML is converted to JSON
       const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl);
 
       fetch(proxyUrl)
@@ -529,22 +529,22 @@ function resetScores() {
           return response.json();
         })
         .then(data => {
-          // Hide loading indicator
+          // Hiding loading indicator
           loadingIndicator.style.display = 'none';
 
-          // Check if the feed was successfully parsed
+          // Checking if the feed was successfully parsed
           if (data.status !== 'ok') {
             throw new Error('Feed could not be parsed');
           }
 
-          // Update the content div with the fetched articles
+          // Updating the content div with the fetched articles
           displayArticles(data.items, data.feed.title);
         })
         .catch(error => {
-          // Hide loading indicator
+          // Hiding loading indicator
           loadingIndicator.style.display = 'none';
 
-          // Display error message
+          // Displaying error message
           console.error('Error:', error);
           errorMessageContainer.innerHTML = `
             <div class="error-message">
@@ -558,14 +558,14 @@ function resetScores() {
 
     /**
      * Function to display articles with title and summary
-     * @param {Array} articles - Array of article objects from the feed
-     * @param {string} feedTitle - Title of the feed
+     * @param {Array} articles 
+     * @param {string} feedTitle 
      */
     function displayArticles(articles, feedTitle) {
-      // Clear previous content
+      
       contentDiv.innerHTML = '';
 
-      // Create feed header
+      // Creating feed header
       const feedHeader = document.createElement('div');
       feedHeader.className = 'feed-header';
       feedHeader.innerHTML = `<h2>${feedTitle}</h2>`;
@@ -576,7 +576,7 @@ function resetScores() {
         return;
       }
 
-      // Create article container
+      // Creating article container
       const articlesContainer = document.createElement('div');
       articlesContainer.className = 'articles-container';
 
@@ -590,7 +590,7 @@ function resetScores() {
           day: 'numeric'
         });
 
-        // Create an article element
+        // Creating an article element
         const articleEl = document.createElement('article');
         articleEl.className = 'feed-article';
 
