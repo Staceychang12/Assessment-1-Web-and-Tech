@@ -1,0 +1,191 @@
+<!--File Name: basic-webpage.html
+Author: Stacey Chang Wai Ling
+Student ID: 21772458 
+Business Web and Mobile Technologies - Portfolio Website-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mauritius Beaches | Stacey Chang Wai Ling</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="javascript.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="c:\Users\Stacey Chang\Pictures\7b2f60e9-ea3e-4e38-86e6-5d80d8e98bbd.png" alt="Stacey Chang Portfolio Logo" class="logo" />
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="basic-webpage.html">Week 2: Basic Webpage</a></li>
+          <li><a href="rps.html">Week 3: Rock Paper Scissors</a></li>
+          <li><a href="flatland.html">Week 4: Flatland Business Advisor</a></li>
+          <li><a href="rss.html">Week 5: RSS Reader</a></li>
+          <li><a href="basic-webpage.html" class="active">Mauritius Beaches</a></li>
+        </ul>
+      </nav>
+      <div class="dark-mode-container">
+        <span class="dark-mode-label">Dark Mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h1>MAURITIAN BEACHES 🌅🏝️🐚</h1>
+      <p>Welcome to my personal page about the stunning beaches of Mauritius that I am so fortunate to call home.</p>
+    </section>
+
+    <section id="beach-intro">
+      <h2>My Island Paradise 🥥🍹🏖️</h2>
+      <p>Growing up in Mauritius has given me a deep connection to the sea. As a local resident, I have spent countless weekends and holidays exploring the pristine coastlines that encircle our beautiful island.</p>
+      <p>The beaches of Mauritius are not just tourist attractions but an integral part of our cultural identity and daily life. The gentle lapping of waves against the shore has been the soundtrack to many of my fondest memories.</p>
+    </section>
+
+    <section id="favorite-beaches">
+      <h2>My Favorite Beaches 🌟</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h3>Belle Mare 🥇</h3>
+          <p>With its powdery white sand stretching for miles and crystal-clear turquoise waters, Belle Mare on the east coast is perfect for long walks and quiet reflection. The sunrise here is absolutely magical.</p>
+        </div>
+        <div class="project">
+          <h3>Flic en Flac 🌴</h3>
+          <p>Located on the west coast, this beach offers spectacular sunsets and calm waters. It's where I often go with friends for weekend picnics and beach games.</p>
+        </div>
+        <div class="project">
+          <h3>Blue Bay 🌊</h3>
+          <p>Home to a protected marine park, Blue Bay offers incredible snorkeling opportunities. I've spent hours exploring the vibrant coral gardens and observing the diverse marine life.</p>
+        </div>
+        <div class="project">
+          <h3>Le Morne 🌄</h3>
+          <p>Nestled at the foot of the iconic Le Morne Brabant mountain, this beach has both historical significance and breathtaking beauty. The turquoise lagoon here is perfect for kitesurfing, which I've recently begun learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="beach-activities">
+      <h2>My Favorite Beach Activities</h2>
+      <ul>
+        <li><strong>Snorkeling 🌊 🤿 🐠 🐚  </strong> - Exploring the underwater world of coral reefs and tropical fish</li>
+        <li><strong>Beach picnics 🏖️ 🍉 🥥 🌴 🌊</strong> - Nothing beats fresh fruits and local snacks while watching the waves</li>
+        <li><strong>Sunset watching 🌅 🌞 🌄 🌊</strong> - The perfect end to any day, especially from the west coast beaches</li>
+        <li><strong>Beach cleanup 🧹 🌍 🏖️ ♻️ </strong> - Participating in regular volunteer activities to keep our shores pristine</li>
+        <li><strong>Shell collecting 🐚 🌊 👣 🐚</strong> - A childhood hobby that I still enjoy during early morning walks</li>
+      </ul>
+    </section>
+
+    <section id="beach-memories">
+      <h2>Cherished Beach Memories</h2>
+      <p>Some of my most treasured memories have been formed along the shores of Mauritius:</p>
+      <ul>
+        <li>Family gatherings during public holidays, with traditional Mauritian barbecues on the beach</li>
+        <li>My first successful attempt at snorkeling at Blue Bay, where I discovered the wonder of coral reefs</li>
+        <li>Early morning study sessions during exam periods, with the calming sound of waves helping me focus</li>
+        <li>Celebrating important milestones with friends as the sun sets over the Indian Ocean</li>
+      </ul>
+    </section>
+
+    <section id="beach-conservation">
+      <h2>Preserving Our Coastal Heritage</h2>
+      <p>As a local who deeply appreciates our beaches, I am deeply passionate about their conservation. Climate change and tourism development present challenges to our coastal ecosystems. I regularly participate in beach cleanup initiatives and support local marine conservation projects.</p>
+      <p>I believe that responsible tourism and local stewardship can ensure that future generations will continue to enjoy the natural beauty of our shores.</p>
+    </section>
+
+    <section id="beach-invitation">
+      <h2>Come Experience Mauritius!!!</h2>
+      <p>If you ever have the opportunity to visit Mauritius, I would be elated to recommend the perfect beaches based on your interests. Whether you seek adventure, relaxation, or natural beauty, our island's coastline always has special experiences/moments to offer everyone.</p>
+      <p>The beaches of Mauritius are not just beautiful landscapes—they are places of connection, reflection, and joy that have shaped who I am as a person today.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Stacey Chang Wai Ling | Portfolio</p>
+  </footer>
+
+  <button id="toTopBtn" aria-label="Back to top">↑</button>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+    
+    // Back to top button functionality
+    const toTopBtn = document.getElementById('toTopBtn');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        toTopBtn.classList.add('visible');
+      } else {
+        toTopBtn.classList.remove('visible');
+      }
+    });
+    
+    toTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Highlight active navigation item
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+
+<body class="basic-webpage">
+</body>
+</html>
+
+<!-- Implementation of beach pictures -->
+<section id="beach-gallery">
+    <h2>Beach Gallery</h2>
+    <div id="beachGallery" class="beach-gallery">
+      <div class="gallery-thumbnails">
+        <img src="https://www.africaodyssey.com/site/odyssey-image-proxy/lodges/belle-mare-plage-holiday-and-honeymoon-guide-to-mauritius=402500-300.jpg" 
+             class="gallery-thumbnail" 
+             data-full="https://www.africaodyssey.com/site/odyssey-image-proxy/lodges/belle-mare-plage-holiday-and-honeymoon-guide-to-mauritius=402500-300.jpg" 
+             data-caption="Belle Mare Beach">
+        
+        <img src="https://bonadvisor.com/wp-content/uploads/2023/02/plage-de-wolmar-840x560-1.jpg" 
+             class="gallery-thumbnail" 
+             data-full="https://bonadvisor.com/wp-content/uploads/2023/02/plage-de-wolmar-840x560-1.jpg" 
+             data-caption="Sunset at Flic en Flac Beach">
+        
+        <img src="https://mauritiusexplored.com/wp-content/uploads/2018/10/Blue-Bay-beach-in-Mauritius.jpg" 
+             class="gallery-thumbnail" 
+             data-full="https://mauritiusexplored.com/wp-content/uploads/2018/10/Blue-Bay-beach-in-Mauritius.jpg" 
+             data-caption="Blue Bay Marine Park">
+        
+        <img src="https://mauritiusattractions.com/slir/w640-c2x1/content/images/gallery/1614/le-morne-beach-mauritius%20(1).jpg" 
+             class="gallery-thumbnail" 
+             data-full="https://mauritiusattractions.com/slir/w640-c2x1/content/images/gallery/1614/le-morne-beach-mauritius%20(1).jpg" 
+             data-caption="Le Morne Beach with the famous mountain">
+      </div>
+      
+      
+      <div class="gallery-main">
+        <img id="fullImage" src="https://mauritiushotels.mu/data/images/discover-mauritius/beaches/mauritius-beaches%20(1).jpg">
+        <p id="imageCaption" class="image-caption">PROOF THAT PARADISE IS REAL IN MAURITIUS!</p>
+      </div>
+    </div>
+  </section>
